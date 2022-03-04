@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/PruebaLleida/static/js/main.5e0d132b.js",
+    "main.js": "/PruebaLleida/static/js/main.ab5124a7.js",
     "index.html": "/PruebaLleida/index.html",
-    "main.5e0d132b.js.map": "/PruebaLleida/static/js/main.5e0d132b.js.map"
+    "main.ab5124a7.js.map": "/PruebaLleida/static/js/main.ab5124a7.js.map"
   },
   "entrypoints": [
-    "static/js/main.5e0d132b.js"
+    "static/js/main.ab5124a7.js"
   ]
 }
