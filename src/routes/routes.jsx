@@ -9,7 +9,7 @@ const Routes = [
       component: Login,
     },
     {
-      path: "/user",
+      path: "/user/:name/:password",
       sidebarName: "",
       component: UserList,
     },
@@ -17,7 +17,7 @@ const Routes = [
       path: "/SendMessage",
       sidebarName: "",
       component: SendMessage,
-    }
+    },
   ];
   
   export default Routes

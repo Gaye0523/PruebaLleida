@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useStyle } from "../assest/style";
+import { useData } from "../hook/useData";
 import { Grid, Paper, Avatar, TextField, Button } from "@material-ui/core";
 import { LockOutlined } from '@material-ui/icons';
 import { useHistory } from 'react-router-dom';
@@ -9,14 +10,14 @@ function Login(props) {
     const classes = useStyle();
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-
+    const [data] = useData(username, password)
+    
     const history = useHistory()
 
-    
 
     const handleSubmit = (e) => {
         e.preventDefault()
-       history.push('/user')
+        history.push(`/user/${username}/${password}`)
     }
 
     return (
@@ -24,7 +25,7 @@ function Login(props) {
             <Paper elevation={10} className={classes.login} >
                 <Grid align="center">
                     <Avatar className={classes.avatar}>
-                        <LockOutlined />
+                        <LockOutlined className={classes.logo} />
                     </Avatar>
                     <h2> Sing In </h2>
                 </Grid>
@@ -33,7 +34,6 @@ function Login(props) {
                         <TextField
                             label="Username"
                             placeholder="Enter userName"
-                            fullWidth
                             required
                             onChange={e => setUsername(e.target.value)}
                             value={username} />
@@ -48,7 +48,6 @@ function Login(props) {
                             type="submit"
                             color="primary"
                             variant="contained"
-                            fullWidth
                         >
                             Login
                         </button>
